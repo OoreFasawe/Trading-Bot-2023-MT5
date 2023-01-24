@@ -135,30 +135,6 @@ void monitorOpenTrades()
                     if(useTrailingStop && (Ask - PositionGetDouble(POSITION_PRICE_OPEN)) >= atrVal && (Ask -  SL) >= atrVal){
                         trade.PositionModify(orderTicket,NormalizeDouble(Bid - atrVal, _Digits), TP);
                     }
-
-
-
-
-                    // // if trade hasn't gone 5 pips in
-                    // if (OrderStopLoss() < OrderOpenPrice() || OrderStopLoss() == 0)
-                    // {
-                    //     if (Ask - OrderOpenPrice() >= takeProfitInPoints * _Point)
-                    //     {
-                    //         if (!OrderModify(OrderTicket(), OrderOpenPrice(), OrderOpenPrice(), 0, 0, 0))
-                    //         {
-                    //         }
-                    //     }
-                    // }
-                    // else
-                    // {
-                    //     if (Ask - OrderStopLoss() >= takeProfitInPoints * 2 * _Point)
-                    //     {
-                    //         OrderModify(OrderTicket(), OrderOpenPrice(), Ask - (takeProfitInPoints * _Point), 0, 0, 0);
-                    //     }
-                    //     // if(Close[1] < bbData[checkCandsForConsCount-2].upper){
-                    //     //     OrderClose(OrderTicket(), OrderLots(), MarketInfo(OrderSymbol(), MODE_ASK), 5, clrBlue);
-                    //     // }
-  
                 }
                 
                 // else if sell
@@ -182,29 +158,6 @@ void monitorOpenTrades()
                     if(useTrailingStop && (PositionGetDouble(POSITION_PRICE_OPEN)-Bid) >= atrVal && (SL - Bid) >= atrVal){
                         trade.PositionModify(orderTicket,NormalizeDouble(Ask + atrVal, _Digits), TP);
                     }
-
-                    
-
-
-                    // if (OrderStopLoss() > OrderOpenPrice() || OrderStopLoss() == 0)
-                    // {
-                    //     if (OrderOpenPrice() - Bid >= takeProfitInPoints * _Point)
-                    //     {
-                    //         if (!OrderModify(OrderTicket(), OrderOpenPrice(), OrderOpenPrice(), 0, 0, 0))
-                    //         {
-                    //         }
-                    //     }
-                    // }
-                    // else
-                    // {
-                    //     if (OrderStopLoss() - Bid >= takeProfitInPoints * 2 * _Point)
-                    //     {
-                    //         OrderModify(OrderTicket(), OrderOpenPrice(), Bid + (takeProfitInPoints * _Point), 0, 0, 0);
-                    //     }
-                    //     // if(Close[1] > bbData[checkCandsForConsCount-2].lower){
-                    //     //     OrderClose(OrderTicket(), OrderLots(), MarketInfo(OrderSymbol(), MODE_BID), 5, clrBlue);
-                    //     // }
-                    // }
                 }
             }
         }

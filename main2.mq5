@@ -2,11 +2,6 @@
 
 void OnInit()
 {
-   // indicator arrays
-   // ArrayResize(ema200Data, checkCandsForConsCount);
-   // ArrayResize(ma10Data, checkCandsForConsCount);
-   // ArrayResize(bbData, checkCandsForConsCount);
-   // ArrayResize(pSarData, checkCandsForConsCount);
    TesterHideIndicators(true);
    EMA_Handle = iMA(NULL, TimeFrame, EMA_Period, EMA_Shift, EMA_Method, EMA_Apply);
    MA10_Handle = iMA(NULL, TimeFrame, MA10_Period, MA10_Shift, MA10_Method, MA10_Apply);
