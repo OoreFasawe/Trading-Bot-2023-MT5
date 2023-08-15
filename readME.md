@@ -1,1 +1,1 @@
-Start of something new
+This is a trading bot that uses crosses between moving averages, price level relative to bollinger bands and, and PSAR indicators to make decisions of when to add on risk and derisk derivatives in the forex markets
